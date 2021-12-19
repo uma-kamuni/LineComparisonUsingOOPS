@@ -14,11 +14,29 @@ public class LineComparisonProgram {
 		line1.setY2(input.nextInt());
 		System.out.println(" x1 is =" + line1.getX1() + " x2 is = " + line1.getX2() + " y1 = " + line1.getY1()
 				+ " y2 = " + line1.getY2());
+		
+		inputLineComparison line2 = new inputLineComparison(); //Line2 Comparison
+        System.out.println("enter the x1,y1,x2,y2 coordinate values for line2");
+        line2.setX1(input.nextInt());
+        line2.setY1(input.nextInt());
+        line2.setX2(input.nextInt());
+        line2.setY2(input.nextInt());
+        System.out.println(" x1 is =" + line2.getX1() + " x2 is = " + line2.getX2() + " y1 = " + line2.getY1() + " y2 = " + line2.getY2());
+
 
 		double length1 = calculateLength(line1.getX1(), line1.getY1(), line1.getX2(), line1.getY2());
 		System.out.println("length for line1 = " + length1);
 
+		 double length2 = calculateLength(line2.getX1(), line2.getY1(), line2.getX2(), line2.getY2());
+	        System.out.println("length for line2 = " +length2);
+
+	        if (length1==length2){
+	            System.out.println("length1 is equal to length2");}
+	        else{
+	            System.out.println("length1 is not equal to length2");
+	    }
 	}
+
 
 	public static double calculateLength(double x1, double y1, double x2, double y2) // Line1 is assigned
 	{
